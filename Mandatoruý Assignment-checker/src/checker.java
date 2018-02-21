@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class checker {
 	
+	
+	
+	// Atli made this comment, alone !!!
 	// Game function.
 	public static void game() {
 		int rows = 10;
