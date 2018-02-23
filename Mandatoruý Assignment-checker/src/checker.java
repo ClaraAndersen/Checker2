@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class checker {
 	
 	
-	
+	// Atli
 	// Atli made this comment, alone !!!
 	// Game function.
 	public static void game() {
