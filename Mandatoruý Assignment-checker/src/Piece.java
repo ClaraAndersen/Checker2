@@ -11,4 +11,8 @@ public class Piece {
 	public Player getOwner() {
 		return this.owner;
 	}
+	
+	public void setPosition(Position newPosition) {
+		this.position = newPosition;
+	}
 }
