@@ -7,10 +7,4 @@ public class Player {
 	public Player(String n){
 		name=n;
 	}
-	
-	//methods
-	public static void getUserInput() {
-		
-	}
-
 }

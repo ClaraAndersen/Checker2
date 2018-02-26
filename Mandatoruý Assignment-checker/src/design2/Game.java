@@ -3,15 +3,6 @@ package design2;
 abstract class Game {
 	Player[] players;
 	static Player currentPlayer;
-	
-//	public Player getCurrentPlayer(){
-//		return currentPlayer;
-//	}
-//	
-//	public void setCurrentPlayer(Player newPlayer) {
-//		currentPlayer=newPlayer;
-//	}
-	
-	abstract void startGame();
 
+	abstract void startGame();
 }

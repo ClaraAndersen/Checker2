@@ -1,20 +1,19 @@
-
-
-
 package design2;
-//TEST
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class GameManager {
-	static Scanner scan = new Scanner(System.in);
+	
 	static int position_x;
 	static int position_y;
 	static int newPosition_x;
 	static int newPosition_y;
 
 	public static Coordinate[] playersMove() {
-
+		
+		
+		Scanner scan = new Scanner(System.in);
 		boolean t = true;
 		while(t) {
 			try {		
@@ -27,9 +26,10 @@ public class GameManager {
 			catch(InputMismatchException e) {
 				scan.nextLine();
 				System.out.println("ERROR. You can only input integers");
-
 			}
 		}
+
+
 		t = true;
 		while(t) {
 			try {		
@@ -43,7 +43,10 @@ public class GameManager {
 
 			}
 		}
+
+
 		Coordinate oldPosition=new Coordinate(position_x,position_y);
+
 
 		t = true;
 		while(t) {
@@ -58,6 +61,7 @@ public class GameManager {
 
 			}
 		}
+
 
 		t = true;
 		while(t) {
@@ -78,8 +82,7 @@ public class GameManager {
 		return move;
 	}
 
-	
-	
+
 	public static void nextPlayer(BoardGame game) {
 		//find index of currentPlayer
 		for(int i=0; i<game.players.length;i++) {

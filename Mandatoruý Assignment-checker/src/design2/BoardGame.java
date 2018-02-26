@@ -4,7 +4,7 @@ public class BoardGame extends Game {
 	static String[][] board;
 	static int rows;
 	static int columns;
-	
+
 	//constructor
 	public BoardGame(int x, int y, Player[] players){
 		rows=y+2;
@@ -12,7 +12,7 @@ public class BoardGame extends Game {
 		this.players=players;
 		currentPlayer=players[0];		
 		board = new String[rows][columns];
-		
+
 
 		int i,j; // i = row and j = column
 		for(i=0 ; i<rows ; i++) {
@@ -31,19 +31,17 @@ public class BoardGame extends Game {
 			}
 		}
 	}
-	
-//	public String[][] getBoard() {
-//		return board;	
-//	}
-//	
+
+
 	//displaying board
 	public static void printBoard() {
-			for(int i=0 ; i<rows ; i++) {
-				for(int j=0 ; j < columns; j++) {
-					System.out.print(board[i][j]+" ");
-				}
-				System.out.println("");	}
-		}
+		for(int i=0 ; i<rows ; i++) {
+			for(int j=0 ; j < columns; j++) {
+				System.out.print(board[i][j]+" ");
+			}
+			System.out.println("");	}
+	}
+
 	
 	public void startGame() {
 
@@ -51,24 +49,25 @@ public class BoardGame extends Game {
 			for(int j=1 ; j < columns-1; j++) {
 				// Starting positions for Player 1's pieces.
 				if (i%2!=0 && i<=3 && j%2==0 && j<=8 && 2<=j) 
-					{board[i][j]="1";
-					}
-					
+				{board[i][j]="1";
+				}
+
 				else if (i%2==0 && i<=3 && j%2!=0 && j<=8 && 1<=j) 
-					{board[i][j]="1";
-					}
-				
+				{board[i][j]="1";
+				}
+
 				// Starting positions for Player 2's pieces.
 				else if (i%2!=0 && 6<=i && j%2==0 && j<=8 && 2<=j) 
-					{board[i][j]="2";
-					}
+				{board[i][j]="2";
+				}
 				else if (i%2==0 && 6<=i && j%2!=0 && j<=8 && 1<=j) 
-					{board[i][j]="2";
-					}
-				}				
-			}
+				{board[i][j]="2";
+				}
+			}				
 		}
-		
+	}
+
+
 	public static void main(String[] args) {
 		Player player1=new Player("1");
 		Player player2= new Player("2");
@@ -87,7 +86,6 @@ public class BoardGame extends Game {
 			if(myMove.isValidMove(currentPosition, newPosition, checker)){
 				myMove.move(currentPosition, newPosition, checker);
 				gameManager.nextPlayer(checker);
-				
 			}
 			else {
 				System.out.println("You did not enter a valid move");
@@ -95,5 +93,5 @@ public class BoardGame extends Game {
 		}
 	}
 }
-		
+
 
