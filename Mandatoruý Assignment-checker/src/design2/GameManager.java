@@ -10,7 +10,7 @@ public class GameManager {
 	static int newPosition_x;
 	static int newPosition_y;
 
-	public Coordinate[] PlayersMove() {
+	public static Coordinate[] playersMove() {
 		try {
 			System.out.println("Coordinate of piece to move");
 			System.out.println("Enter X: ");
@@ -36,7 +36,7 @@ public class GameManager {
 			System.out.println("ERROR. You can only input integers");
 		}
 		
-		Coordinate newPosition=new Coordinate(newPosition_x,newPosition_y);
+		Coordinate newPosition=new Coordinate(newPosition_x,newPosition_y);		
 	
 	Coordinate[] move=new Coordinate[] {oldPosition,newPosition};
 	return move;

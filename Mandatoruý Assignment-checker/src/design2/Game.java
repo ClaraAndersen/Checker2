@@ -2,7 +2,7 @@ package design2;
 
 abstract class Game {
 	Player[] players;
-	Player currentPlayer;
+	static Player currentPlayer;
 	
 	public Player getCurrentPlayer(){
 		return currentPlayer;
