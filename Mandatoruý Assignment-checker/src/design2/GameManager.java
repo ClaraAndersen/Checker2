@@ -10,46 +10,24 @@ public class GameManager {
 	static int newPosition_x;
 	static int newPosition_y;
 
-	public static int getPosition_x() {
+	public static void PlayersMove() {
 		try {
-			return position_x = scan.nextInt();	
+			System.out.println("Current X position");
+			position_x = scan.nextInt();
+
+			System.out.println("Current Y position");
+			position_y = scan.nextInt();
+
+			System.out.println("New X position");
+			newPosition_x = scan.nextInt();
+
+			System.out.println("New Y position");
+			newPosition_y = scan.nextInt();
 		}
 		catch(InputMismatchException e) {
 			System.out.println("ERROR. You can only input integers");
 		}
-		return position_x;
 	}
-
-	public static int getPosition_y() {
-		try {
-			return position_y = scan.nextInt();	
-		}
-		catch(InputMismatchException e) {
-			System.out.println("ERROR. You can only input integers");
-		}
-		return position_y;
-	}
-
-	public static int getNewPosition_x() {
-		try {
-			return newPosition_x = scan.nextInt();	
-		}
-		catch(InputMismatchException e) {
-			System.out.println("ERROR. You can only input integers");
-		}
-		return newPosition_x;
-	}
-
-	public static int getNewPosition_y() {
-		try {
-			return newPosition_y = scan.nextInt();	
-		}
-		catch(InputMismatchException e) {
-			System.out.println("ERROR. You can only input integers");
-		}
-		return newPosition_y;
-	}
-
 
 }
 
