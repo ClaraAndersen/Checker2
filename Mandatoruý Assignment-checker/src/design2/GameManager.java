@@ -2,7 +2,7 @@ package design2;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-// test
+
 public class GameManager {
 	static Scanner scan = new Scanner(System.in);
 	static int position_x;
