@@ -10,9 +10,10 @@ public class DiagonalMove implements Move {
 						(newPosition.x%2==0 && oldPosition.x%2!=0)) &&
 
 				//testing if move is forward
-				(game.currentPlayer==player1 && newPosition.y==oldPosition.y+1) ||
-						(game.currentPlayer==player2 && newPosition.y==oldPosition.y-1)&&
+				((game.currentPlayer.name==player1.name && newPosition.y==oldPosition.y+1) ||
+						(game.currentPlayer.name==player2.name && newPosition.y==oldPosition.y-1))&&
 		
+				newPosition.x<game.columns-1 && 0<newPosition.x && newPosition.y<game.columns-1 && 0<newPosition.y &&
 			//if  new position is empty
 						game.board[newPosition.y][newPosition.x]==" "&&
 			//if it is players piece	
