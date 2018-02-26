@@ -4,8 +4,8 @@ public class Player {
 	String name;
 	
 	//constructors
-	public Player(String name){
-		this.name=name;
+	public Player(String n){
+		name=n;
 	}
 	
 	//methods

@@ -76,6 +76,21 @@ public class BoardGame extends Game {
 			}
 		}
 		
+	
+	public static void main(String[] args) {
+		Player player1=new Player("1");
+		Player player2= new Player("2");
+		Player[] playerList=new Player[] {player1,player2};
+		BoardGame checker=new BoardGame(8,8,playerList) ;
+		checker.startGame();
+		//Create a new GameManger
+//		GameManager gameManger= new GameManger();
+		while(true) {
+//			GameManger.playersMove();
+//			GameManger.nextPlayer();
+			
+		}
+	}
 		
 		
 }
