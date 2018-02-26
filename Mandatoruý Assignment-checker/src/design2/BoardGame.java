@@ -11,7 +11,7 @@ public class BoardGame extends Game {
 		columns=x+2;
 		this.players=players;
 		currentPlayer=players[0];		
-		this.board = new String[rows][columns];
+		board = new String[rows][columns];
 		
 
 		int i,j; // i = row and j = column
@@ -32,10 +32,10 @@ public class BoardGame extends Game {
 		}
 	}
 	
-	public String[][] getBoard() {
-		return board;	
-	}
-	
+//	public String[][] getBoard() {
+//		return board;	
+//	}
+//	
 	//displaying board
 	public static void printBoard() {
 			for(int i=0 ; i<rows ; i++) {
@@ -52,31 +52,22 @@ public class BoardGame extends Game {
 				// Starting positions for Player 1's pieces.
 				if (i%2!=0 && i<=3 && j%2==0 && j<=8 && 2<=j) 
 					{board[i][j]="1";
-					Coordinate c=new Coordinate(j,i);
 					}
 					
 				else if (i%2==0 && i<=3 && j%2!=0 && j<=8 && 1<=j) 
 					{board[i][j]="1";
-					Coordinate c=new Coordinate(j,i);
 					}
 				
 				// Starting positions for Player 2's pieces.
 				else if (i%2!=0 && 6<=i && j%2==0 && j<=8 && 2<=j) 
 					{board[i][j]="2";
-					Coordinate c=new Coordinate(j,i);
 					}
 				else if (i%2==0 && 6<=i && j%2!=0 && j<=8 && 1<=j) 
 					{board[i][j]="2";
-					Coordinate c=new Coordinate(j,i);
 					}
 				}				
 			}
 		}
-	
-	public void nextPlayer() {
-		
-		
-	}
 		
 	public static void main(String[] args) {
 		Player player1=new Player("1");
@@ -88,7 +79,7 @@ public class BoardGame extends Game {
 		GameManager gameManager= new GameManager();
 		while(true) {
 			printBoard();
-			System.out.println("Turn of player no. "+ currentPlayer);
+			System.out.println("Turn of player no. "+ currentPlayer.name);
 			Coordinate[] move=gameManager.playersMove();
 			Coordinate currentPosition=move[0];
 			Coordinate newPosition=move[1];
