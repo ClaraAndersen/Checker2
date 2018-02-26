@@ -76,6 +76,20 @@ public class BoardGame extends Game {
 			}
 		}
 		
+		public static void main(String[] args) {
+			
+			System.out.println("Player " + "1" + ", Select piece");
+			
+			System.out.println("X position");
+			//
+			System.out.println("Y position");
+			//
+			
+			System.out.println("New X position");
+			//
+			System.out.println("New Y position");
+			//
+			}
+		}
 		
-		
-}
+
