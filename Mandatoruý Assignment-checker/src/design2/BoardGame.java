@@ -1,9 +1,17 @@
+package design2;
 
-public class Board {
+public class BoardGame extends Game {
 	String[][] board;
-	public Board(int x, int y){
-		
+	
+	Player[] players;
+	Player currentPlayer;
+	
+	//constructor
+	public void Board(int x, int y, Player[] players){
+		this.players=players;
+		currentPlayer=players[0];		
 		board = new String[y][x];
+		
 
 		int i,j; // i = row and j = column
 		for(i=0 ; i<y ; i++) {
@@ -24,19 +32,16 @@ public class Board {
 	}
 	
 	public String[][] getBoard() {
-		return this.board;
-		
+		return board;	
 	}
 	
 	//displaying board
 	public void printBoard() {
-		//first loop goes through rows second through columns.
-		for(int i=0 ; i<10 ; i++) {
-			for(int j=0 ; j < 10; j++) {
-				System.out.print(board[i][j]+" ");
-			}
-			System.out.println("");	}
-	}
+			for(int i=0 ; i<10 ; i++) {
+				for(int j=0 ; j < 10; j++) {
+					System.out.print(board[i][j]+" ");
+				}
+				System.out.println("");	}
+		}
+	
 }
-
-
