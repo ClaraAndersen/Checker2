@@ -1,8 +1,8 @@
 package design2;
 
 public interface Move {
-	public boolean isValidMove(Piece, Coordinate);
-	public void Move(Piece, Coordinate);
+	public boolean isValidMove(Piece piece, Coordinate newPosition);
+	public void Move(Piece piece, Coordinate newPosition);
 	
 
 }

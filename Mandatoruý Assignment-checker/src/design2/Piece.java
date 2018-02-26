@@ -8,6 +8,10 @@ public class Piece {
 		this.position=position;
 	}
 	
+	public Player getOwner() {
+		return owner;
+	}
+	
 	public Coordinate getPosition(){
 		return position;
 		
