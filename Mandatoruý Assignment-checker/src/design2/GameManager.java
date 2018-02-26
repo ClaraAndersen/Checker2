@@ -10,14 +10,22 @@ public class GameManager {
 	static int newPosition_x;
 	static int newPosition_y;
 
-	public static void PlayersMove() {
+	public Coordinate[] PlayersMove() {
 		try {
-			System.out.println("Current X position");
+			System.out.println("Coordinate of piece to move");
+			System.out.println("Enter X: ");
 			position_x = scan.nextInt();
-
+			
+			System.out.println("Enter Y: ");
 			System.out.println("Current Y position");
 			position_y = scan.nextInt();
-
+		}
+		catch(InputMismatchException e) {
+			System.out.println("ERROR. You can only input integers");
+		}
+			Coordinate oldPosition=new Coordinate(position_x,position_y);
+			
+		try {
 			System.out.println("New X position");
 			newPosition_x = scan.nextInt();
 
@@ -27,7 +35,13 @@ public class GameManager {
 		catch(InputMismatchException e) {
 			System.out.println("ERROR. You can only input integers");
 		}
+		
+		Coordinate newPosition=new Coordinate(newPosition_x,newPosition_y);
+	
+	Coordinate[] move=new Coordinate[] {oldPosition,newPosition};
+	return move;
 	}
-
+	
+	
 }
 

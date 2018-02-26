@@ -75,6 +75,11 @@ public class BoardGame extends Game {
 				}				
 			}
 		}
+	
+	public void nextPlayer() {
+		
+		
+	}
 		
 	public static void main(String[] args) {
 		Player player1=new Player("1");
