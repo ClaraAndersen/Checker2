@@ -92,8 +92,7 @@ public class BoardGame extends Game {
 			Coordinate[] move=gameManager.playersMove();
 			Coordinate currentPosition=move[0];
 			Coordinate newPosition=move[1];
-			
-			
+
 			
 			
 			
