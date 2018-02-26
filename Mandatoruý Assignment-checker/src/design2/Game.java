@@ -1,6 +1,6 @@
 package design2;
 
-public class Game {
+abstract class Game {
 	Player[] players;
 	Player currentPlayer;
 	
@@ -12,8 +12,6 @@ public class Game {
 		currentPlayer=newPlayer;
 	}
 	
-	public static void startGame(){
-		
-	}
+	abstract void startGame();
 
 }
