@@ -32,11 +32,11 @@ public class Game {
 	}
 
 
-	public static void main(String[] args) {
-		Board board = new Board();
-		StartGame(board);
-		board.printBoard();
-	}
+//	public static void main(String[] args) {
+//		Board board = new Board();
+//		StartGame(board);
+//		board.printBoard();
+//	}
 
 
 }

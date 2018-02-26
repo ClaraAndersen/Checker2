@@ -50,6 +50,6 @@ public class GameManager {
 		return newPosition_y;
 	}
 
-// TEST
+
 }
 
