@@ -1,18 +1,28 @@
 
+
+import design2.Coordinate;
+import design2.Player;
+
 public class Piece {
 	Player owner;
-	Position position; 
+	Coordinate position;
 	
-	
-	public Position getPosition() {
-		return this.position;
+	public Piece(Player player , Coordinate position){
+		owner=player;
+		this.position=position;
 	}
 	
 	public Player getOwner() {
-		return this.owner;
+		return owner;
 	}
 	
-	public void setPosition(Position newPosition) {
-		this.position = newPosition;
+	public Coordinate getPosition(){
+		return position;
+		
 	}
+	
+	public void setPosition(Coordinate position){
+		this.position=position;
+	}
+
 }

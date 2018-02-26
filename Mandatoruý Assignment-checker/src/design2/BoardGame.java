@@ -2,8 +2,8 @@ package design2;
 
 public class BoardGame extends Game {	
 	static String[][] board;
-	int rows;
-	int columns;
+	static int rows;
+	static int columns;
 	
 	//constructor
 	public BoardGame(int x, int y, Player[] players){
@@ -38,41 +38,36 @@ public class BoardGame extends Game {
 	
 	//displaying board
 	public static void printBoard() {
-			for(int i=0 ; i<10 ; i++) {
-				for(int j=0 ; j < 10; j++) {
+			for(int i=0 ; i<rows ; i++) {
+				for(int j=0 ; j < columns; j++) {
 					System.out.print(board[i][j]+" ");
 				}
 				System.out.println("");	}
 		}
 	
 	public void startGame() {
-		int n1=1;
-		int n2=1;
+
 		for(int i=1 ; i<rows-1 ; i++) {
 			for(int j=1 ; j < columns-1; j++) {
 				// Starting positions for Player 1's pieces.
 				if (i%2!=0 && i<=3 && j%2==0 && j<=8 && 2<=j) 
 					{board[i][j]="1";
 					Coordinate c=new Coordinate(j,i);
-					Piece p=new Piece(players[0],c);
 					}
 					
 				else if (i%2==0 && i<=3 && j%2!=0 && j<=8 && 1<=j) 
 					{board[i][j]="1";
 					Coordinate c=new Coordinate(j,i);
-					Piece p=new Piece(players[0],c);
 					}
 				
 				// Starting positions for Player 2's pieces.
 				else if (i%2!=0 && 6<=i && j%2==0 && j<=8 && 2<=j) 
-					{board[i][j]="p";
+					{board[i][j]="2";
 					Coordinate c=new Coordinate(j,i);
-					Piece p=new Piece(players[1],c);
 					}
 				else if (i%2==0 && 6<=i && j%2!=0 && j<=8 && 1<=j) 
 					{board[i][j]="2";
 					Coordinate c=new Coordinate(j,i);
-					Piece p=new Piece(players[1],c);
 					}
 				}				
 			}
@@ -94,8 +89,11 @@ public class BoardGame extends Game {
 		while(true) {
 			printBoard();
 			System.out.println("Turn of player no. "+ currentPlayer);
-			Coordinate currentPosition=gameManager.playersMove()[0];
-			Coordinate newPosition=gameManager.playersMove()[1];
+			Coordinate[] move=gameManager.playersMove();
+			Coordinate currentPosition=move[0];
+			Coordinate newPosition=move[1];
+			
+			
 			
 			
 			

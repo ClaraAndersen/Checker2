@@ -17,7 +17,6 @@ public class GameManager {
 			position_x = scan.nextInt();
 			
 			System.out.println("Enter Y: ");
-			System.out.println("Current Y position");
 			position_y = scan.nextInt();
 		}
 		catch(InputMismatchException e) {
