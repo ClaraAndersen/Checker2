@@ -78,4 +78,20 @@ public class GameManager {
 		return move;
 	}
 
+	
+	
+	public static void nextPlayer(BoardGame game) {
+		//find index of currentPlayer
+		for(int i=0; i<game.players.length;i++) {
+			if(game.players[i].equals(game.currentPlayer)) {
+				if(i==game.players.length-1) {
+					game.currentPlayer=game.players[0];
+				}
+				else {
+					game.currentPlayer=game.players[i+1];
+				}
+				break;
+			}
+		}
+	}
 }

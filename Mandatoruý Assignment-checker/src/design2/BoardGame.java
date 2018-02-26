@@ -92,12 +92,15 @@ public class BoardGame extends Game {
 			Coordinate[] move=gameManager.playersMove();
 			Coordinate currentPosition=move[0];
 			Coordinate newPosition=move[1];
-
-			
-			
-			
-//			GameManger.nextPlayer();
-			
+			DiagonalMove myMove=new DiagonalMove();
+			if(myMove.isValidMove(currentPosition, newPosition, checker)){
+				myMove.move(currentPosition, newPosition, checker);
+				gameManager.nextPlayer(checker);
+				
+			}
+			else {
+				System.out.println("You did not enter a valid move");
+			}		
 		}
 	}
 }
