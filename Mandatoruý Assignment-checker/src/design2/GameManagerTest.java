@@ -11,17 +11,6 @@ public class GameManagerTest {
 
 	
 	@Test
-	public void testPlayersMove() {
-
-	GameManager gameManager = new GameManager();
-	
-	// Needs input from user in order to get coverage. 
-	// Run as JUnit.
-	assertEquals("Test Move", gameManager.playersMove());
-	
-	}
-	
-	@Test
 	public void testNextPlayer() {
 		GameManager gameManager = new GameManager();
 
