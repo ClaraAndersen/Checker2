@@ -9,6 +9,28 @@ import org.junit.Test;
 
 public class GameManagerTest {
 
+	
+	@Test
+	public void testPlayersMove() {
+
+	GameManager gameManager = new GameManager();
+	
+	Player player1 = new Player("1");
+	Player player2 = new Player("2");
+	Player[] players = new Player[] {player1, player2};
+
+	BoardGame boardGame = new BoardGame(8, 8, players);
+	
+	boardGame.startGame();
+	int x_position = 2;
+	int y_position = 3;
+	int newPosition_x = 1;
+	int newPosition_y = 4;
+	
+	assertEquals("x should be 2,3 ", gameManager.playersMove());
+	
+	}
+	
 	@Test
 	public void testNextPlayer() {
 		GameManager gameManager = new GameManager();
