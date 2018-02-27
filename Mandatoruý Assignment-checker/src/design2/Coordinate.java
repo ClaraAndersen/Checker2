@@ -1,3 +1,6 @@
+/*
+ * By Atli and Clara
+ */
 package design2;
 
 public class Coordinate {

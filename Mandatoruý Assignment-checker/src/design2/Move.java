@@ -1,3 +1,6 @@
+/*
+ * by Atli and Clara
+ */
 package design2;
 
 public interface Move {

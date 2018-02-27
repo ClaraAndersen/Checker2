@@ -1,3 +1,6 @@
+/*
+ * By Atli and Clara
+ */
 package design2;
 
 import java.util.InputMismatchException;
@@ -10,8 +13,11 @@ public class GameManager {
 	static int newPosition_x;
 	static int newPosition_y;
 
+	//Method which handles the user inputs, describing the move the user wish
+	//to perform, and transform this in to an array of Coordinates, where the
+	//first entry represent the coordinate from where the piece should be moved
+	//and the second the coordinate to which it should be moved
 	public static Coordinate[] playersMove() {
-		
 		
 		Scanner scan = new Scanner(System.in);
 		boolean t = true;
@@ -82,7 +88,7 @@ public class GameManager {
 		return move;
 	}
 
-
+	//change status of currentPlayer in a Board game, to the next player
 	public static void nextPlayer(BoardGame game) {
 		//find index of currentPlayer
 		for(int i=0; i<game.players.length;i++) {
@@ -98,3 +104,7 @@ public class GameManager {
 		}
 	}
 }
+
+
+//references
+//testing user input:https://stackoverflow.com/questions/24414299/java-scanner-exception-handling

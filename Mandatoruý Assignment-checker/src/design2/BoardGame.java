@@ -1,3 +1,7 @@
+/*
+ * By Atli and Clara
+ */
+
 package design2;
 
 public class BoardGame extends Game {	
@@ -13,7 +17,7 @@ public class BoardGame extends Game {
 		currentPlayer=players[0];		
 		board = new String[rows][columns];
 
-
+		//creating boarder on board
 		int i,j; // i = row and j = column
 		for(i=0 ; i<rows ; i++) {
 			for(j=0 ; j < columns; j++) {
@@ -43,6 +47,7 @@ public class BoardGame extends Game {
 	}
 
 	
+	//Placing piece on board in initial position
 	public void startGame() {
 
 		for(int i=1 ; i<rows-1 ; i++) {
@@ -67,15 +72,15 @@ public class BoardGame extends Game {
 		}
 	}
 
-
+	//main executing the actual board game
 	public static void main(String[] args) {
 		Player player1=new Player("1");
 		Player player2= new Player("2");
 		Player[] playerList=new Player[] {player1,player2};
 		BoardGame checker=new BoardGame(8,8,playerList) ;
 		checker.startGame();
-		//Create a new GameManger
 		GameManager gameManager= new GameManager();
+		
 		while(true) {
 			printBoard();
 			System.out.println("Turn of player no. "+ currentPlayer.name);
@@ -83,8 +88,11 @@ public class BoardGame extends Game {
 			Coordinate currentPosition=move[0];
 			Coordinate newPosition=move[1];
 			DiagonalMove myMove=new DiagonalMove();
+			//checking it move is valid
 			if(myMove.isValidMove(currentPosition, newPosition, checker)){
+				//move piece
 				myMove.move(currentPosition, newPosition, checker);
+				//change player
 				gameManager.nextPlayer(checker);
 			}
 			else {

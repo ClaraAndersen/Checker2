@@ -1,11 +1,14 @@
+/*
+ * By Atli and Clara
+ */
 package design2;
 
 public class DiagonalMove implements Move {
-	Player player1=new Player("1");
-	Player player2=new Player("2");
-
-
+	
+	//Testing if it is allowed to move a piece given by oldPosition, to newPosition in a boardGame.
 	public boolean isValidMove(Coordinate oldPosition, Coordinate newPosition,BoardGame game){
+		Player player1=new Player("1");
+		Player player2=new Player("2");
 		return( 
 				//testing if move is diagonal
 				((oldPosition.x%2==0 && newPosition.x%2!=0) ||
@@ -22,7 +25,7 @@ public class DiagonalMove implements Move {
 				game.board[oldPosition.y][oldPosition.x]==game.currentPlayer.name.toString());
 	}
 
-
+	//Moving piece from oldPosition to newPosition in a BoardGame
 	public void move(Coordinate oldPosition, Coordinate newPosition,BoardGame game) {
 		game.board[newPosition.y][newPosition.x]=game.board[oldPosition.y][oldPosition.x];
 		game.board[oldPosition.y][oldPosition.x]=" ";

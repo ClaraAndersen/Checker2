@@ -1,3 +1,6 @@
+/*
+ * by Atli and Clara
+ */
 package design2;
 
 import static org.junit.Assert.*;
